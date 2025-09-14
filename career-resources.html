@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Career Resources - Bay Atlantic University</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/student-services.css">
+    <style>
+        .resources-section {
+            background: white;
+            padding: 60px 0;
+        }
+        
+        .resources-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .resources-header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        
+        .resources-header h1 {
+            font-size: 32px;
+            color: var(--primary-dark);
+            margin-bottom: 20px;
+        }
+        
+        .resources-header p {
+            font-size: 18px;
+            color: #666;
+            line-height: 1.6;
+        }
+        
+        .resources-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+        
+        .resource-card {
+            background: #f8f9fa;
+            border-radius: 12px;
+            padding: 30px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .resource-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+        }
+        
+        .resource-icon {
+            font-size: 48px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        
+        .resource-card h3 {
+            color: var(--primary-dark);
+            margin-bottom: 15px;
+            font-size: 22px;
+            text-align: center;
+        }
+        
+        .resource-description {
+            color: #666;
+            font-size: 14px;
+            line-height: 1.6;
+            margin-bottom: 25px;
+            text-align: center;
+        }
+        
+        .resource-links {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .resource-links li {
+            margin-bottom: 10px;
+        }
+        
+        .resource-links a {
+            color: var(--primary-dark);
+            text-decoration: none;
+            padding: 8px 15px;
+            border-radius: 6px;
+            background: white;
+            display: block;
+            transition: background 0.3s;
+            font-size: 14px;
+            border: 1px solid #e0e0e0;
+        }
+        
+        .resource-links a:hover {
+            background: var(--primary-gold);
+            color: var(--primary-dark);
+        }
+        
+        .featured-section {
+            background: linear-gradient(135deg, var(--primary-dark), var(--accent-blue));
+            color: white;
+            padding: 40px;
+            border-radius: 12px;
+            text-align: center;
+            margin-top: 40px;
+        }
+        
+        .featured-section h2 {
+            margin-bottom: 20px;
+            font-size: 24px;
+        }
+        
+        .featured-section p {
+            margin-bottom: 25px;
+            opacity: 0.9;
+        }
+        
+        .download-guide-btn {
+            background: var(--primary-gold);
+            color: var(--primary-dark);
+            border: none;
+            padding: 15px 30px;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        .download-guide-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        }
+        
+        @media (max-width: 768px) {
+            .resources-header h1 {
+                font-size: 24px;
+            }
+            
+            .resources-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+            
+            .resource-card {
+                padding: 25px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+        <header class="header">
+        <div class="header-container">
+            <div class="header-left">
+                <img src="images\logo.jpg" alt="Bau logo">
+                <div class="header-text-container">
+                    <div class="header-text">STUDENT SERVICES HUB</div>
+                    <div class="header-subtext">BAY ATLANTIC UNIVERSITY</div>
+                </div>
+            </div>
+            
+            <div class="header-center">
+                <nav>
+                    <ul class="nav-links">
+                        <li><a href="about-us.html">About Us</a></li>
+                        <li><a href="administration.html">Administration</a></li>
+                        <li><a href="all-events.html">Events</a></li>
+                        <li><a href="elections.html">Elections</a></li>
+                    </ul>
+                </nav>
+            </div>
+            
+            <div class="header-right">
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/BayAtlanticUniversity/" class="social-icon" target="_blank">f</a>
+                    <a href="https://www.instagram.com/bau_dc/?hl=en" class="social-icon" target="_blank">@</a>
+                    <a href="https://www.linkedin.com/school/bay-atlantic-university/posts/?feedView=all" class="social-icon" target="_blank">in</a>
+                    <a href="https://x.com/BayAtlanticUni" class="social-icon" target="_blank">X</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Breadcrumb -->
+    <div class="breadcrumb">
+        <div class="container">
+            <a href="index.html">Home</a> > <span>Career Resources</span>
+        </div>
+    </div>
+
+    <!-- Resources Section -->
+    <section class="resources-section">
+        <div class="resources-container">
+            <div class="resources-header">
+                <h1>Career Resources</h1>
+                <p>Access comprehensive tools and platforms to accelerate your job search and professional development journey.</p>
+            </div>
+
+            <div class="resources-grid">
+                <div class="resource-card">
+                    <div class="resource-icon">💼</div>
+                    <h3>Job Sites</h3>
+                    <p class="resource-description">Discover the best job boards and career platforms to find your next opportunity.</p>
+                    <ul class="resource-links">
+                        <li><a href="https://www.linkedin.com/jobs" target="_blank">LinkedIn Jobs</a></li>
+                        <li><a href="https://www.indeed.com" target="_blank">Indeed</a></li>
+                        <li><a href="https://www.glassdoor.com" target="_blank">Glassdoor</a></li>
+                        <li><a href="https://www.monster.com" target="_blank">Monster</a></li>
+                        <li><a href="https://www.ziprecruiter.com" target="_blank">ZipRecruiter</a></li>
+                    </ul>
+                </div>
+
+                <div class="resource-card">
+                    <div class="resource-icon">🎯</div>
+                    <h3>Industry-Specific Platforms</h3>
+                    <p class="resource-description">Specialized job boards for specific industries and career paths.</p>
+                    <ul class="resource-links">
+                        <li><a href="https://www.dice.com" target="_blank">Dice (Tech)</a></li>
+                        <li><a href="https://www.usajobs.gov" target="_blank">USAJobs (Government)</a></li>
+                        <li><a href="https://www.idealist.org" target="_blank">Idealist (Non-profit)</a></li>
+                        <li><a href="https://www.upwork.com" target="_blank">Upwork (Freelance)</a></li>
+                        <li><a href="https://angel.co" target="_blank">AngelList (Startups)</a></li>
+                    </ul>
+                </div>
+
+                <div class="resource-card">
+                    <div class="resource-icon">📚</div>
+                    <h3>Skill Development</h3>
+                    <p class="resource-description">Enhance your skills with online learning platforms and certification programs.</p>
+                    <ul class="resource-links">
+                        <li><a href="https://www.coursera.org" target="_blank">Coursera</a></li>
+                        <li><a href="https://www.linkedin.com/learning" target="_blank">LinkedIn Learning</a></li>
+                        <li><a href="https://www.udemy.com" target="_blank">Udemy</a></li>
+                        <li><a href="https://www.edx.org" target="_blank">edX</a></li>
+                        <li><a href="https://www.skillshare.com" target="_blank">Skillshare</a></li>
+                    </ul>
+                </div>
+
+                <div class="resource-card">
+                    <div class="resource-icon">🌐</div>
+                    <h3>Professional Networking</h3>
+                    <p class="resource-description">Build your professional network and connect with industry professionals.</p>
+                    <ul class="resource-links">
+                        <li><a href="https://www.linkedin.com" target="_blank">LinkedIn</a></li>
+                        <li><a href="https://www.meetup.com" target="_blank">Meetup</a></li>
+                        <li><a href="https://www.eventbrite.com" target="_blank">Eventbrite</a></li>
+                        <li><a href="https://www.alumni.net" target="_blank">Alumni.NET</a></li>
+                        <li><a href="https://www.shapr.co" target="_blank">Shapr</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="featured-section">
+                <h2>Complete Career Guide</h2>
+                <p>Download our comprehensive career guide featuring resume templates, interview tips, salary negotiation strategies, and more.</p>
+                <button class="download-guide-btn" id="download-guide">Download Career Guide</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="services-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-left">
+                    <h3>Career Resources</h3>
+                    <div class="footer-divider"></div>
+                    <p>Empowering Bay Atlantic University students with the tools and knowledge needed for successful career transitions.</p>
+                </div>
+                <div class="footer-center">
+                    <div class="contact-info">
+                        <p>+1 2024503247</p>
+                        <div class="address">
+                            <p>1510 H St NW,</p>
+                            <p>Washington, DC</p>
+                            <p>20005</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-right">
+                    <p>Bay Atlantic University is a 501(c)(3) non-profit recognized by the IRS.</p>
+                    <div class="footer-social">
+                        <a href="#" class="footer-social-icon">f</a>
+                        <a href="#" class="footer-social-icon">@</a>
+                        <a href="#" class="footer-social-icon">in</a>
+                        <a href="#" class="footer-social-icon">💬</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function showNotification(message, type = 'success') {
+            const notification = document.createElement('div');
+            notification.textContent = message;
+            notification.style.cssText = `
+                position: fixed; top: 20px; right: 20px; padding: 15px 20px;
+                background: ${type === 'success' ? '#28a745' : '#dc3545'};
+                color: white; border-radius: 5px; z-index: 1000;
+                box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+                transform: translateX(100%); transition: transform 0.3s ease;
+            `;
+            document.body.appendChild(notification);
+            setTimeout(() => notification.style.transform = 'translateX(0)', 100);
+            setTimeout(() => {
+                notification.style.transform = 'translateX(100%)';
+                setTimeout(() => document.body.removeChild(notification), 300);
+            }, 3000);
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            const downloadBtn = document.getElementById('download-guide');
+            
+            downloadBtn.addEventListener('click', function() {
+                this.textContent = 'Downloading...';
+                this.style.background = '#666';
+                
+                setTimeout(() => {
+                    this.textContent = 'Download Career Guide';
+                    this.style.background = '';
+                    showNotification('Career guide downloaded successfully!', 'success');
+                    
+                    const link = document.createElement('a');
+                    link.href = 'https://baubayatlantic-my.sharepoint.com/:b:/g/personal/smylavarapu_stu_bau_edu/Eb3NMzKPiXNFoEAN0rFPm68BZWjIIE0JuS4453y9xjUljQ?e=Bp6edY&download=1';
+                    link.download = 'BAU-Complete-Career-Guide.pdf';
+                    document.body.appendChild(link);
+                    link.click();
+                    document.body.removeChild(link);
+                }, 1000);
+            });
+
+            // Add click tracking for external links
+            const resourceLinks = document.querySelectorAll('.resource-links a');
+            resourceLinks.forEach(link => {
+                link.addEventListener('click', function() {
+                    const siteName = this.textContent;
+                    showNotification(`Opening ${siteName}...`, 'info');
+                });
+            });
+        });
+    </script>
+</body>
+</html>

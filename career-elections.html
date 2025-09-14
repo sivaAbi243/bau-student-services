@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elections - Student Government Association - Bay Atlantic University</title>
+    <link rel="stylesheet" href="css/elections-styles.css">
+</head>
+<body>
+    <!-- Header -->
+        <header class="header">
+        <div class="header-container">
+            <div class="header-left">
+                <img src="images\logo.jpg" alt="Bau logo">
+                <div class="header-text-container">
+                    <div class="header-text">STUDENT SERVICES HUB</div>
+                    <div class="header-subtext">BAY ATLANTIC UNIVERSITY</div>
+                </div>
+            </div>
+            
+            <div class="header-center">
+                <nav>
+                    <ul class="nav-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about-us.html">About Us</a></li>
+                        <li><a href="office-hours.html">Administration</a></li>
+                        <li><a href="all-events.html">Events</a></li>
+                        <li><a href="career-elections.html">Elections</a></li>
+                    </ul>
+                </nav>
+            </div>
+            
+            <div class="header-right">
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/BayAtlanticUniversity/" class="social-icon" target="_blank">f</a>
+                    <a href="https://www.instagram.com/bau_dc/?hl=en" class="social-icon" target="_blank">@</a>
+                    <a href="https://www.linkedin.com/school/bay-atlantic-university/posts/?feedView=all" class="social-icon" target="_blank">in</a>
+                    <a href="https://x.com/BayAtlanticUni" class="social-icon" target="_blank">X</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Elections Hero Section -->
+    <section class="elections-hero">
+        <div class="hero-background">
+            <img src="https://picsum.photos/1200/400?random=50" alt="Elections Hero" class="hero-bg-image">
+            <div class="hero-overlay"></div>
+        </div>
+        <div class="hero-content">
+            <div class="container">
+                <!-- Breadcrumb -->
+                <div class="breadcrumb">
+                    <a href="index.html">Home</a> > <span>Elections</span>
+                </div>
+                
+                <!-- Main Title -->
+                <h1 class="page-title">Elections</h1>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            
+            <!-- Election Section -->
+            <section class="election-section">
+                <div class="election-content">
+                    <div class="election-text">
+                        <h2 class="election-heading">Spring 2025 Election</h2>
+                        <p class="election-description">
+                            Join the Student Government Association and make a difference in your university experience. 
+                            The Spring 2025 elections are now open for candidate applications. This is your opportunity 
+                            to represent your fellow students and contribute to positive changes on campus.
+                        </p>
+                        <p class="election-details">
+                            Positions available include President, Vice President, Secretary, Treasurer, and various 
+                            committee representatives. All students in good academic standing are eligible to apply.
+                        </p>
+                    </div>
+                    
+                    <div class="election-image">
+                        <img src="https://picsum.photos/400/300?random=51" alt="BAU Students" class="bau-students-image">
+                    </div>
+                </div>
+            </section>
+
+            <!-- Candidate Application Section -->
+            <section class="candidate-application-section">
+                <h2 class="section-title">Candidate Application</h2>
+                
+                <div class="application-table">
+                    <div class="table-header">
+                        <div class="header-col">Application</div>
+                        <div class="header-col">Last Submission</div>
+                    </div>
+                    <div class="table-row">
+                        <div class="application-cell">
+                            <div class="pdf-icon">
+                                <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTE0IDJINlMyIDIgMiA0VjIwQzIgMjIgNCAyMiA2IDIySDEzVjIwSDZWNEgxM1Y5SDE4VjExSDIwVjlMMTQgMloiIGZpbGw9IiNEQzI2MjYiLz4KPHBhdGggZD0iTTE1IDE1SDlWMTdIMTVWMTVaIiBmaWxsPSIjREMyNjI2Ii8+CjxwYXRoIGQ9Ik0xNSAxMUg5VjEzSDE1VjExWiIgZmlsbD0iI0RDMjYyNiIvPgo8L3N2Zz4K" alt="PDF" class="pdf-image">
+                            </div>
+                            <span class="application-text">Application Form</span>
+                        </div>
+                        <div class="submission-cell">
+                            <span class="submission-date">06/29-10:30 AM</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="application-actions">
+                    <button class="download-btn" onclick="downloadApplication()">
+                        Download Application Form
+                    </button>
+                    <button class="submit-btn" onclick="submitApplication()">
+                        Submit Application
+                    </button>
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <h4>Explore BAU</h4>
+                    <ul>
+                        <li><a href="#">About BAU</a></li>
+                        <li><a href="#">Accreditation</a></li>
+                        <li><a href="#">Governance & Ownership</a></li>
+                        <li><a href="#">Institutional Effectiveness</a></li>
+                        <li><a href="#">Public Disclosure & Policies</a></li>
+                        <li><a href="#">Partners</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Academics</h4>
+                    <ul>
+                        <li><a href="#">Faculty</a></li>
+                        <li><a href="#">Registration</a></li>
+                        <li><a href="#">Academic Catalog</a></li>
+                        <li><a href="#">Library</a></li>
+                        <li><a href="#">Center for Teaching and Learning</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Media</h4>
+                    <ul>
+                        <li><a href="#">News</a></li>
+                        <li><a href="#">Student Testimonials</a></li>
+                        <li><a href="#">Logo Usage</a></li>
+                        <li><a href="#">Events</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact Us</h4>
+                    <ul>
+                        <li><a href="#">Request Information</a></li>
+                        <li><a href="#">Location, Transportation, and Directions</a></li>
+                    </div>
+                <div class="footer-section social-section">
+                    <div class="social-icons-footer">
+                        <a href="#" class="social-icon-footer">📘</a>
+                        <a href="#" class="social-icon-footer">✖</a>
+                        <a href="#" class="social-icon-footer">📘</a>
+                        <a href="#" class="social-icon-footer">▶</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="footer-bottom-left">
+                    <p>Bay Atlantic University is a 501(c)(3) non-profit institution recognized by the IRS</p>
+                </div>
+                <div class="footer-bottom-right">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Contact Us</a>
+                    <a href="#">Career Page</a>
+                    <span>© Copyright All Reserved BAU</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/elections-script.js"></script>
+</body>
+</html>

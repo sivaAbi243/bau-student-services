@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Community Service Gallery - Bay Atlantic University</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/student-services.css">
+    <style>
+        .gallery-section {
+            background: white;
+            padding: 60px 0;
+        }
+        
+        .gallery-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .gallery-header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        
+        .gallery-header h1 {
+            font-size: 32px;
+            color: var(--primary-dark);
+            margin-bottom: 20px;
+        }
+        
+        .gallery-header p {
+            font-size: 18px;
+            color: #666;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin-bottom: 50px;
+        }
+        
+        .gallery-item {
+            background: #f8f9fa;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+            cursor: pointer;
+        }
+        
+        .gallery-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+        }
+        
+        .image-placeholder {
+            width: 100%;
+            height: 250px;
+            background: linear-gradient(135deg, #e9ecef, #dee2e6);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: #6c757d;
+            font-size: 48px;
+            position: relative;
+        }
+        
+        .image-placeholder::after {
+            content: "Click to upload image";
+            font-size: 14px;
+            margin-top: 10px;
+            opacity: 0.8;
+        }
+        
+        .gallery-caption {
+            padding: 20px;
+            text-align: center;
+        }
+        
+        .gallery-caption h3 {
+            color: var(--primary-dark);
+            margin-bottom: 8px;
+            font-size: 18px;
+        }
+        
+        .gallery-caption p {
+            color: #666;
+            font-size: 14px;
+            line-height: 1.5;
+            margin: 0;
+        }
+        
+        .gallery-stats {
+            background: #f8f9fa;
+            padding: 40px;
+            border-radius: 12px;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+        
+        .stat-item {
+            padding: 20px;
+        }
+        
+        .stat-number {
+            font-size: 36px;
+            font-weight: bold;
+            color: var(--primary-dark);
+            margin-bottom: 10px;
+        }
+        
+        .stat-label {
+            color: #666;
+            font-size: 14px;
+        }
+        
+        .upload-section {
+            background: linear-gradient(135deg, #e8f4fd, #f0f8ff);
+            padding: 30px;
+            border-radius: 12px;
+            text-align: center;
+            margin-top: 40px;
+        }
+        
+        .upload-section h3 {
+            color: var(--primary-dark);
+            margin-bottom: 15px;
+        }
+        
+        .upload-section p {
+            color: #666;
+            margin-bottom: 20px;
+        }
+        
+        .upload-btn {
+            background: var(--primary-dark);
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 6px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        
+        .upload-btn:hover {
+            background: var(--accent-blue);
+        }
+        
+        /* Modal styles for image viewer */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+        
+        .modal-content {
+            display: block;
+            margin: auto;
+            max-width: 80%;
+            max-height: 80%;
+            margin-top: 5%;
+        }
+        
+        .close {
+            position: absolute;
+            top: 15px;
+            right: 35px;
+            color: white;
+            font-size: 40px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        
+        @media (max-width: 768px) {
+            .gallery-header h1 {
+                font-size: 24px;
+            }
+            
+            .gallery-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+            
+            .stats-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+            
+            .image-placeholder {
+                height: 200px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+        <header class="header">
+        <div class="header-container">
+            <div class="header-left">
+                <img src="images\logo.jpg" alt="Bau logo">
+                <div class="header-text-container">
+                    <div class="header-text">STUDENT SERVICES HUB</div>
+                    <div class="header-subtext">BAY ATLANTIC UNIVERSITY</div>
+                </div>
+            </div>
+            
+            <div class="header-center">
+                <nav>
+                    <ul class="nav-links">
+                        <li><a href="about-us.html">About Us</a></li>
+                        <li><a href="administration.html">Administration</a></li>
+                        <li><a href="all-events.html">Events</a></li>
+                        <li><a href="elections.html">Elections</a></li>
+                    </ul>
+                </nav>
+            </div>
+            
+            <div class="header-right">
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/BayAtlanticUniversity/" class="social-icon" target="_blank">f</a>
+                    <a href="https://www.instagram.com/bau_dc/?hl=en" class="social-icon" target="_blank">@</a>
+                    <a href="https://www.linkedin.com/school/bay-atlantic-university/posts/?feedView=all" class="social-icon" target="_blank">in</a>
+                    <a href="https://x.com/BayAtlanticUni" class="social-icon" target="_blank">X</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Breadcrumb -->
+    <div class="breadcrumb">
+        <div class="container">
+            <a href="index.html">Home</a> > <span>Community Service Gallery</span>
+        </div>
+    </div>
+
+    <!-- Gallery Section -->
+    <section class="gallery-section">
+        <div class="gallery-container">
+            <div class="gallery-header">
+                <h1>Community Service Gallery</h1>
+                <p>Explore the impact of Bay Atlantic University's community service initiatives through photos and stories from our volunteer events, partnerships, and outreach programs.</p>
+            </div>
+
+            <!-- Gallery Stats -->
+            <div class="gallery-stats">
+                <div class="stats-grid">
+                    <div class="stat-item">
+                        <div class="stat-number">500+</div>
+                        <div class="stat-label">Volunteer Hours</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">25+</div>
+                        <div class="stat-label">Community Partners</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">150+</div>
+                        <div class="stat-label">Students Involved</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Gallery Grid -->
+            <div class="gallery-grid">
+                <div class="gallery-item" data-image="food-drive">
+                    <div class="image-placeholder">
+                        📷
+                    </div>
+                    <div class="gallery-caption">
+                        <h3>Food Drive Initiative</h3>
+                        <p>Students collected over 1,000 pounds of food for local food banks during our annual drive.</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-image="park-cleanup">
+                    <div class="image-placeholder">
+                        📷
+                    </div>
+                    <div class="gallery-caption">
+                        <h3>Park Cleanup Day</h3>
+                        <p>Volunteers cleaned up Meridian Hill Park, removing litter and planting new flowers.</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-image="literacy-program">
+                    <div class="image-placeholder">
+                        📷
+                    </div>
+                    <div class="gallery-caption">
+                        <h3>Reading Program</h3>
+                        <p>BAU students mentoring local elementary school children in reading and literacy skills.</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-image="senior-center">
+                    <div class="image-placeholder">
+                        📷
+                    </div>
+                    <div class="gallery-caption">
+                        <h3>Senior Center Visit</h3>
+                        <p>Students spent time with seniors, sharing stories and providing companionship.</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-image="habitat-build">
+                    <div class="image-placeholder">
+                        📷
+                    </div>
+                    <div class="gallery-caption">
+                        <h3>Habitat for Humanity</h3>
+                        <p>BAU volunteers helping build affordable housing in the Washington DC area.</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-image="blood-drive">
+                    <div class="image-placeholder">
+                        📷
+                    </div>
+                    <div class="gallery-caption">
+                        <h3>Blood Drive Campaign</h3>
+                        <p>Students organized and participated in campus blood drives, saving lives in our community.</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-image="homeless-shelter">
+                    <div class="image-placeholder">
+                        📷
+                    </div>
+                    <div class="gallery-caption">
+                        <h3>Shelter Volunteer Work</h3>
+                        <p>Regular volunteer shifts at local homeless shelters, serving meals and providing support.</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-image="beach-cleanup">
+                    <div class="image-placeholder">
+                        📷
+                    </div>
+                    <div class="gallery-caption">
+                        <h3>Environmental Conservation</h3>
+                        <p>Students participated in river cleanup efforts to protect local waterways and wildlife.</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-image="fundraiser-event">
+                    <div class="image-placeholder">
+                        📷
+                    </div>
+                    <div class="gallery-caption">
+                        <h3>Charity Fundraiser</h3>
+                        <p>Annual charity gala organized by students, raising funds for local nonprofit organizations.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Upload Section -->
+            <div class="upload-section">
+                <h3>Share Your Community Service Photos</h3>
+                <p>Have photos from recent volunteer activities? Help us showcase the amazing work our students are doing!</p>
+                <button class="upload-btn" onclick="showUploadInfo()">Submit Photos</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal for image viewing -->
+    <div id="imageModal" class="modal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img class="modal-content" id="modalImage">
+    </div>
+
+    <!-- Footer -->
+    <footer class="services-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-left">
+                    <h3>Community Service Gallery</h3>
+                    <div class="footer-divider"></div>
+                    <p>Celebrating the dedication and impact of Bay Atlantic University students making a difference in their communities.</p>
+                </div>
+                <div class="footer-center">
+                    <div class="contact-info">
+                        <p>+1 2024503247</p>
+                        <div class="address">
+                            <p>1510 H St NW,</p>
+                            <p>Washington, DC</p>
+                            <p>20005</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-right">
+                    <p>Bay Atlantic University is a 501(c)(3) non-profit recognized by the IRS.</p>
+                    <div class="footer-social">
+                        <a href="#" class="footer-social-icon">f</a>
+                        <a href="#" class="footer-social-icon">@</a>
+                        <a href="#" class="footer-social-icon">in</a>
+                        <a href="#" class="footer-social-icon">💬</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function showNotification(message, type = 'success') {
+            const notification = document.createElement('div');
+            notification.textContent = message;
+            notification.style.cssText = `
+                position: fixed; top: 20px; right: 20px; padding: 15px 20px;
+                background: ${type === 'success' ? '#28a745' : type === 'info' ? '#17a2b8' : '#dc3545'};
+                color: white; border-radius: 5px; z-index: 1000;
+                box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+                transform: translateX(100%); transition: transform 0.3s ease;
+            `;
+            document.body.appendChild(notification);
+            setTimeout(() => notification.style.transform = 'translateX(0)', 100);
+            setTimeout(() => {
+                notification.style.transform = 'translateX(100%)';
+                setTimeout(() => document.body.removeChild(notification), 300);
+            }, 3000);
+        }
+
+        // Gallery item click functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const galleryItems = document.querySelectorAll('.gallery-item');
+            
+            galleryItems.forEach(item => {
+                item.addEventListener('click', function() {
+                    const imageName = this.getAttribute('data-image');
+                    showNotification(`Image placeholder for: ${imageName}. Replace with actual images later.`, 'info');
+                    
+                    // Add visual feedback
+                    this.style.transform = 'scale(1.02)';
+                    setTimeout(() => {
+                        this.style.transform = '';
+                    }, 200);
+                });
+            });
+        });
+
+        function showUploadInfo() {
+            showNotification('Photo submission feature coming soon! Contact us directly to share your photos.', 'info');
+        }
+
+        function openModal(imageSrc) {
+            document.getElementById('imageModal').style.display = 'block';
+            document.getElementById('modalImage').src = imageSrc;
+        }
+
+        function closeModal() {
+            document.getElementById('imageModal').style.display = 'none';
+        }
+
+        // Close modal when clicking outside of image
+        window.onclick = function(event) {
+            const modal = document.getElementById('imageModal');
+            if (event.target === modal) {
+                closeModal();
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,767 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Services Hub - Bay Atlantic University</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/student-services.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-container">
+            <div class="header-left">
+                <img src="images\logo.jpg" alt="Bau logo">
+                <div class="header-text-container">
+                    <div class="header-text">STUDENT SERVICES HUB</div>
+                    <div class="header-subtext">BAY ATLANTIC UNIVERSITY</div>
+                </div>
+            </div>
+            
+            <div class="header-center">
+                <nav>
+                    <ul class="nav-links">
+                        <li><a href="about-us.html">About Us</a></li>
+                        <li><a href="office-hours.html">Administration</a></li>
+                        <li><a href="trips.html">Events</a></li>
+                        <li><a href="career-elections.html">Elections</a></li>
+                    </ul>
+                </nav>
+            </div>
+            
+            <div class="header-right">
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/BayAtlanticUniversity/" class="social-icon" target="_blank">f</a>
+                    <a href="https://www.instagram.com/bau_dc/?hl=en" class="social-icon" target="_blank">@</a>
+                    <a href="https://www.linkedin.com/school/bay-atlantic-university/posts/?feedView=all" class="social-icon" target="_blank">in</a>
+                    <a href="https://x.com/BayAtlanticUni" class="social-icon" target="_blank">X</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Breadcrumb -->
+    <div class="breadcrumb">
+        <div class="container">
+            <span>Student services hub</span>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="services-hero">
+        <img src="images\Banner (2) (1).jpg" alt="Career Development">
+        <div class="services-hero-overlay"></div>
+        <div class="services-hero-content">
+        </div>
+    </section>
+
+    <!-- Quick Access Icons -->
+    <section class="quick-access">
+        <div class="container">
+            <div class="quick-icons">
+                <div class="quick-icon" data-dropdown="career">
+                    <div class="icon-circle career">
+                        <span>💼</span>
+                    </div>
+                    <span>Career</span>
+                    <div class="quick-icon-dropdown" id="career-dropdown">
+                        <div class="dropdown-header">Career Services</div>
+                        <ul class="dropdown-items">
+                            <li class="dropdown-item" data-action="career-corner-news" data-url="career-corner-news.html">Career Corner News</li>
+                            <li class="dropdown-item" data-action="career-counseling" data-url="career-counseling.html">Career Counseling</li>
+                            <li class="dropdown-item" data-action="intern-opportunities" data-url="intern-opportunities.html">Intern Opportunities</li>
+                            <li class="dropdown-item" data-action="career-resources" data-url="career-resources.html">Resources</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="quick-icon" data-dropdown="community">
+                    <div class="icon-circle community">
+                        <span>❤️</span>
+                    </div>
+                    <span>Community Service</span>
+                    <div class="quick-icon-dropdown" id="community-dropdown">
+    <div class="dropdown-header">Community Service</div>
+    <ul class="dropdown-items">
+        <li class="dropdown-item" data-action="volunteer-opportunities" data-url="volunteer-opportunities.html">Volunteer Opportunities</li>
+        <li class="dropdown-item" data-action="featured-organizations" data-url="featured-organizations.html">Featured Organizations</li>
+        <li class="dropdown-item" data-action="gallery" data-url="community-gallery.html">Gallery</li>
+    </ul>
+</div>
+                </div>
+                <div class="quick-icon" data-dropdown="events">
+                    <div class="icon-circle events">
+                        <span>🎯</span>
+                    </div>
+                    <span>Events</span>
+                    <div class="quick-icon-dropdown" id="events-dropdown">
+                        <div class="dropdown-header">Events & Trips</div>
+                        <ul class="dropdown-items">
+                            <li class="dropdown-item" data-action="archive" data-url="trips.html">Archive</li>
+                            <li class="dropdown-item" data-action="student-clubs" data-url="student-clubs.html">Student Clubs</li>
+                            <li class="dropdown-item" data-action="networking">Networking</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="quick-icon" data-dropdown="team">
+                    <div class="icon-circle team">
+                        <span>👥</span>
+                    </div>
+                    <span>About Us</span>
+                    <div class="quick-icon-dropdown" id="team-dropdown">
+    <div class="dropdown-header">Our Team</div>
+    <ul class="dropdown-items">
+        <li class="dropdown-item" data-action="office-hours" data-url="office-hours.html">Office Hours</li>
+        <li class="dropdown-item" data-action="Student Union(The Bay)">Student Union(The Bay)</li>
+    </ul>
+</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Services Section -->
+    <section class="our-services">
+        <div class="container">
+            <h2>Our Services</h2>
+            <div class="services-grid">
+                <div class="service-card" data-service="career">
+                    <div class="service-image">
+                        <img src="images\SS Banner.jpg" alt="Career Development">
+                        <div class="service-overlay">
+                            <span>CAREER DEVELOPMENT</span>
+                        </div>
+                    </div>
+                    <h3>Career Development</h3>
+                    <p>Launch your professional journey with personalized career counseling, resume optimization, interview coaching, and exclusive job placement opportunities.</p>
+                </div>
+                <div class="service-card" data-service="elections">
+                    <div class="service-image"> 
+                        <img src="images\Students Election  (1).jpg" alt="Wellness & Support">
+                    </div>
+                    <h3>Elections</h3>
+                    <p>Students campaign for positions like president, vice president, secretary, treasurer, and various senator roles.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-image">
+                        <img src="images\Screenshot 2025-09-10 003231.png" alt="Student Housing">
+                    </div>
+                    <h3>Student Housing</h3>
+                    <p>Find your home away from home with residence hall matching, meal plan options, housing applications, and dining services.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+  <!-- Upcoming Events & Trips -->
+    <section class="upcoming-events">
+        <div class="container">
+            <h2>Upcoming Events & Trips</h2>
+            <div class="events-banner">
+                <img src="images\SS Banner (3).jpg" alt="Beach Event">
+                <div class="event-info">
+                </div>
+            </div>
+            <div class="learn-more-container">
+                <button class="learn-more-btn">Learn More ↗</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Student Success Stories -->
+    <section class="success-stories">
+        <div class="container">
+            <h2>💭 Student Success Stories</h2>
+            <div class="stories-grid">
+                <div class="story-card">
+                    <p>Recently, I think SGA is pretty important for our campus. Last semester they helped get extended library hours during Senior week, which was a huge win for everyone. I like that we actually have a way to bring up issues that matter to us students. Sure, sometimes it feels like they move slowly on things, but at least someone is fighting for us when the administration wants to make changes that affect our daily life.</p>
+                </div>
+                <div class="story-card red">
+                    <p>To kind of mixed on SGA. On one hand, it's cool that we have student representation, but sometimes I feel like it's just the same group of people who are already involved in everything else on campus. I went to a few meetings my sophomore year, but it felt like my voice didn't really matter unless I was willing to run for office. I wish there were more ways for regular students to actually influence decisions without having to commit to being in student government.</p>
+                    <div class="story-author"></div>
+                </div>
+                <div class="story-card">
+                    <p>To be honest, I barely know what SGA does most of the time. I see their posters around campus and get emails about elections, but I don't really feel connected to what they're working on. Maybe they're doing good stuff behind the scenes, but I wish they were better at letting us know what they've actually accomplished. Like, what has changed because of SGA? I'd probably care more if I could see the real impact they're making.</p>
+                    <div class="story-author"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Follow us on social -->
+    <section class="social-section">
+        <div class="container">
+            <h2>Follow us on social</h2>
+            <div class="social-grid">
+                <div class="social-image">
+                    <img src="https://picsum.photos/200/200?random=social1" alt="Social 1">
+                </div>
+                <div class="social-image">
+                    <img src="https://picsum.photos/200/200?random=social2" alt="Social 2">
+                </div>
+                <div class="social-image">
+                    <img src="https://picsum.photos/200/200?random=social3" alt="Social 3">
+                </div>
+                <div class="social-image">
+                    <img src="https://picsum.photos/200/200?random=social4" alt="Social 4">
+                </div>
+            </div>
+            <div class="social-button-container">
+                <button class="social-btn">Social</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <h4>Explore BAU</h4>
+                    <ul>
+                        <li><a href="#">About BAU</a></li>
+                        <li><a href="#">Faculty</a></li>
+                        <li><a href="#">Admissions</a></li>
+                        <li><a href="#">Departments</a></li>
+                        <li><a href="#">Universities</a></li>
+                        <li><a href="#">Research</a></li>
+                        <li><a href="#">Public Interest</a></li>
+                        <li><a href="#">Events</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Academics</h4>
+                    <ul>
+                        <li><a href="#">Undergraduate</a></li>
+                        <li><a href="#">Graduate</a></li>
+                        <li><a href="#">Academic Catalog</a></li>
+                        <li><a href="#">Library</a></li>
+                        <li><a href="#">Academic Planning</a></li>
+                        <li><a href="#">Scheduling</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Media</h4>
+                    <ul>
+                        <li><a href="#">Student News</a></li>
+                        <li><a href="#">Leadership</a></li>
+                        <li><a href="#">Logic Design</a></li>
+                        <li><a href="#">Events</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact Us</h4>
+                    <ul>
+                        <li><a href="#">BAU University</a></li>
+                        <li><a href="#">1510 H Street,</a></li>
+                        <li><a href="#">Washington, DC 20005</a></li>
+                        <li><a href="#">Phone: 202-XXX-XXXX</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Follow Us</h4>
+                    <div class="social-icons">
+                        <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/bau.sga" class="social-icon" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-x-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Bay Atlantic University Student Government Association. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+// ======================
+// STUDENT SERVICES FUNCTIONALITY (UPDATED WITH CAREER LINKS)
+// ======================
+
+// ======================
+// UTILITY FUNCTIONS
+// ======================
+function validateEmail(email) {
+    const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return re.test(email);
+}
+
+function showNotification(message, type = 'success') {
+    const existingNotifications = document.querySelectorAll('.notification');
+    existingNotifications.forEach(notif => notif.remove());
+    
+    const notification = document.createElement('div');
+    notification.className = `notification ${type}`;
+    notification.textContent = message;
+    
+    const colors = {
+        success: '#28a745',
+        info: '#17a2b8', 
+        error: '#dc3545',
+        warning: '#ffc107'
+    };
+    
+    notification.style.cssText = `
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        padding: 15px 20px;
+        background: ${colors[type] || colors.info};
+        color: white;
+        border-radius: 8px;
+        z-index: 10000;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+        transform: translateX(100%);
+        transition: transform 0.3s ease;
+        max-width: 300px;
+        word-wrap: break-word;
+        font-weight: 500;
+    `;
+    
+    document.body.appendChild(notification);
+    
+    setTimeout(() => {
+        notification.style.transform = 'translateX(0)';
+    }, 100);
+    
+    setTimeout(() => {
+        notification.style.transform = 'translateX(100%)';
+        setTimeout(() => {
+            if (notification.parentNode) {
+                notification.parentNode.removeChild(notification);
+            }
+        }, 300);
+    }, 3000);
+}
+
+function safeRedirect(url, fallbackMessage) {
+    if (url && url.endsWith('.html')) {
+        try {
+            window.location.href = url;
+        } catch (error) {
+            console.warn(`Failed to redirect to ${url}:`, error);
+            showNotification(fallbackMessage, 'info');
+        }
+    } else {
+        showNotification(fallbackMessage, 'info');
+    }
+}
+
+// ======================
+// SERVICE CARD INTERACTIONS
+// ======================
+function initServiceCards() {
+    const serviceCards = document.querySelectorAll('.service-card');
+    
+    serviceCards.forEach(card => {
+        card.addEventListener('click', function() {
+            const serviceName = this.querySelector('h3').textContent;
+            const serviceType = this.getAttribute('data-service');
+            
+            this.style.transform = 'scale(0.98)';
+            setTimeout(() => {
+                this.style.transform = 'scale(1)';
+            }, 150);
+            
+            if (serviceType === 'career' || serviceName.toLowerCase().includes('career')) {
+                showNotification('Opening Career Services...', 'success');
+                setTimeout(() => {
+                    window.location.href = 'career-counseling.html';
+                }, 500);
+            } else if (serviceType === 'elections' || serviceName.toLowerCase().includes('elections')) {
+                showNotification('Opening Elections...', 'success');
+                setTimeout(() => {
+                    window.location.href = 'career-elections.html';
+                }, 500);
+            } else {
+                switch(serviceName.toLowerCase()) {
+                    case 'student housing':
+    const userChoice = confirm('Would you like to visit the housing website? Click Cancel to download the PDF instead.');
+    if (userChoice) {
+        showNotification('Opening Housing Website...', 'success');
+        setTimeout(() => {
+            window.location.href = 'https://bauhousing.4stay.com/';
+        }, 500);
+    } else {
+        showNotification('Downloading Housing PDF...', 'success');
+        setTimeout(() => {
+            const link = document.createElement('a');
+            link.href = 'https://baubayatlantic-my.sharepoint.com/:b:/g/personal/smylavarapu_stu_bau_edu/EV7KlhMGWbdGpTy_73MLfDQBvNyb-6AWUkfkFGcZgXTmcg?e=Gwacvv&download=1';
+            link.download = 'Housing-Info.pdf';
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+        }, 500);
+    }
+    break;
+                }
+            }
+        });
+        
+        card.addEventListener('mouseenter', function() {
+            this.style.transform = 'translateY(-8px)';
+            this.style.boxShadow = '0 8px 25px rgba(0, 0, 0, 0.15)';
+        });
+        
+        card.addEventListener('mouseleave', function() {
+            this.style.transform = 'translateY(0)';
+            this.style.boxShadow = '0 4px 12px rgba(0, 0, 0, 0.1)';
+        });
+    });
+}
+
+// ======================
+// QUICK ACCESS ICONS WITH DROPDOWNS
+// ======================
+function initQuickAccessIcons() {
+    const quickIcons = document.querySelectorAll('.quick-icon');
+    const dropdowns = document.querySelectorAll('.quick-icon-dropdown');
+    let activeDropdown = null;
+    
+    quickIcons.forEach(icon => {
+        icon.addEventListener('click', function(e) {
+            e.stopPropagation();
+            
+            const dropdownId = this.getAttribute('data-dropdown') + '-dropdown';
+            const dropdown = document.getElementById(dropdownId);
+            
+            dropdowns.forEach(dd => {
+                if (dd.id !== dropdownId) {
+                    dd.classList.remove('active');
+                }
+            });
+            
+            if (dropdown) {
+                const isActive = dropdown.classList.contains('active');
+                
+                if (isActive) {
+                    dropdown.classList.remove('active');
+                    activeDropdown = null;
+                } else {
+                    dropdown.classList.add('active');
+                    activeDropdown = dropdown;
+                }
+            }
+            
+            this.style.transform = 'scale(0.95)';
+            setTimeout(() => {
+                this.style.transform = 'scale(1)';
+            }, 150);
+        });
+    });
+    
+    document.querySelectorAll('.dropdown-item').forEach(item => {
+        item.addEventListener('click', function(e) {
+            e.stopPropagation();
+            
+            const action = this.getAttribute('data-action');
+            const url = this.getAttribute('data-url');
+            const text = this.textContent;
+            
+            this.style.transform = 'scale(0.95)';
+            setTimeout(() => {
+                this.style.transform = 'scale(1)';
+            }, 100);
+            
+            if (url) {
+                showNotification(`Opening ${text}...`, 'success');
+                setTimeout(() => {
+                    window.location.href = url;
+                }, 500);
+            } else {
+                handleDropdownAction(action, text);
+            }
+            
+            if (activeDropdown) {
+                activeDropdown.classList.remove('active');
+                activeDropdown = null;
+            }
+        });
+    });
+    
+    document.addEventListener('click', function(e) {
+        if (!e.target.closest('.quick-icon')) {
+            dropdowns.forEach(dropdown => {
+                dropdown.classList.remove('active');
+            });
+            activeDropdown = null;
+        }
+    });
+    
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape' && activeDropdown) {
+            activeDropdown.classList.remove('active');
+            activeDropdown = null;
+        }
+    });
+}
+
+// ======================
+// DROPDOWN ACTION HANDLER
+// ======================
+function handleDropdownAction(action, text) {
+    const actions = {
+        // Career Services - now redirect to actual pages
+        'career-corner-news': () => {
+            showNotification('Opening Career Corner News...', 'success');
+            setTimeout(() => window.location.href = 'career-corner-news.html', 500);
+        },
+        'career-counseling': () => {
+            showNotification('Opening Career Counseling...', 'success');
+            setTimeout(() => window.location.href = 'career-counseling.html', 500);
+        },
+        'intern-opportunities': () => {
+            showNotification('Opening Intern Opportunities...', 'success');
+            setTimeout(() => window.location.href = 'intern-opportunities.html', 500);
+        },
+        'career-resources': () => {
+            showNotification('Opening Career Resources...', 'success');
+            setTimeout(() => window.location.href = 'career-resources.html', 500);
+        },
+        
+        // Community Service
+        'volunteer-opportunities': () => {
+            showNotification('Volunteer Opportunities page coming soon', 'info');
+        },
+        'local-partnerships': () => {
+            showNotification('Featured Organizations page coming soon', 'info');
+        },
+        'Featured Organizations': () => {
+            showNotification('Featured Organizations page coming soon', 'info');
+        },
+        'Gallery': () => {
+            showNotification('Gallery page coming soon', 'info');
+        },
+        
+        // Events
+        'Archive': () => {
+            showNotification('Opening Events Archive...', 'success');
+            setTimeout(() => window.location.href = 'trips.html', 500);
+        },
+        'archive': () => {
+            showNotification('Opening Events Archive...', 'success');
+            setTimeout(() => window.location.href = 'trips.html', 500);
+        },
+        'student-activities': () => {
+            showNotification('Opening Student Clubs...', 'success');
+            setTimeout(() => window.location.href = 'student-clubs.html', 500);
+        },
+        'student-clubs': () => {
+            showNotification('Opening Student Clubs...', 'success');
+            setTimeout(() => window.location.href = 'student-clubs.html', 500);
+        },
+        'academic-workshops': () => {
+            showNotification('Academic Workshops page coming soon', 'info');
+        },
+        'Academic Workshops': () => {
+            showNotification('Academic Workshops page coming soon', 'info');
+        },
+        'Networking': () => {
+            showNotification('Networking page coming soon', 'info');
+        },
+        
+        
+       // Team
+'Office Hours': () => {
+    showNotification('Opening Office Hours...', 'success');
+    setTimeout(() => window.location.href = 'office-hours.html', 500);
+},
+'office-hours': () => {
+    showNotification('Opening Office Hours...', 'success');
+    setTimeout(() => window.location.href = 'office-hours.html', 500);
+},
+        
+    };
+    
+    if (actions[action]) {
+        actions[action]();
+    } else {
+        showNotification(`${text} page coming soon`, 'info');
+    }
+}
+
+// ======================
+// NEWSLETTER SIGNUP
+// ======================
+function initNewsletterSignup() {
+    const newsletterForm = document.querySelector('.newsletter-signup');
+    const emailInput = newsletterForm?.querySelector('input[type="email"]');
+    const submitBtn = newsletterForm?.querySelector('button');
+    
+    if (newsletterForm && emailInput && submitBtn) {
+        submitBtn.addEventListener('click', function(e) {
+            e.preventDefault();
+            
+            const email = emailInput.value.trim();
+            
+            if (validateEmail(email)) {
+                this.textContent = 'Subscribed!';
+                this.style.background = '#28a745';
+                emailInput.value = '';
+                
+                setTimeout(() => {
+                    this.textContent = 'Submit';
+                    this.style.background = '';
+                }, 2000);
+                
+                showNotification('Successfully subscribed to newsletter!', 'success');
+            } else {
+                emailInput.style.borderColor = '#dc3545';
+                emailInput.placeholder = 'Please enter a valid email';
+                showNotification('Please enter a valid email address', 'error');
+                
+                setTimeout(() => {
+                    emailInput.style.borderColor = '';
+                    emailInput.placeholder = 'Yes, subscribe me to your newsletter';
+                }, 3000);
+            }
+        });
+        
+        emailInput.addEventListener('input', function() {
+            if (this.value && validateEmail(this.value)) {
+                this.style.borderColor = '#28a745';
+            } else if (this.value) {
+                this.style.borderColor = '#dc3545';
+            } else {
+                this.style.borderColor = '';
+            }
+        });
+    }
+}
+
+// ======================
+// OTHER INTERACTIONS
+// ======================
+function initEventsBanner() {
+    const eventsBanner = document.querySelector('.events-banner');
+    const learnMoreBtn = document.querySelector('.learn-more-btn');
+    
+    if (eventsBanner) {
+        eventsBanner.addEventListener('click', function() {
+            console.log('Events banner clicked');
+        });
+    }
+    
+    if (learnMoreBtn) {
+        learnMoreBtn.addEventListener('click', function() {
+            window.location.href = 'trips.html';
+        });
+    }
+}
+
+function initSocialInteractions() {
+    const socialImages = document.querySelectorAll('.social-image');
+    socialImages.forEach(image => {
+        image.addEventListener('click', function() {
+            this.style.transform = 'scale(0.95)';
+            setTimeout(() => {
+                this.style.transform = 'scale(1)';
+            }, 150);
+            showNotification('Social media integration coming soon!', 'info');
+        });
+    });
+    
+    const socialBtn = document.querySelector('.social-btn');
+    if (socialBtn) {
+        socialBtn.addEventListener('click', function() {
+            showNotification('Social media links coming soon', 'info');
+        });
+    }
+}
+
+function initSuccessStories() {
+    const storyCards = document.querySelectorAll('.story-card');
+    
+    storyCards.forEach(card => {
+        card.addEventListener('click', function() {
+            this.style.transform = 'scale(1.02)';
+            setTimeout(() => {
+                this.style.transform = 'scale(1)';
+            }, 200);
+            showNotification('Full story feature coming soon!', 'info');
+        });
+    });
+}
+
+function initContactInfo() {
+    const phoneNumbers = document.querySelectorAll('.contact-info p');
+    phoneNumbers.forEach(p => {
+        if (p.textContent.includes('+1')) {
+            p.style.cursor = 'pointer';
+            p.addEventListener('click', function() {
+                const phoneNumber = this.textContent.replace(/\s/g, '');
+                window.location.href = `tel:${phoneNumber}`;
+            });
+        }
+    });
+}
+
+// ======================
+// ACCESSIBILITY AND ERROR HANDLING
+// ======================
+function initAccessibility() {
+    const serviceCards = document.querySelectorAll('.service-card');
+    serviceCards.forEach((card, index) => {
+        card.setAttribute('role', 'button');
+        card.setAttribute('tabindex', '0');
+        card.setAttribute('aria-label', `Service option ${index + 1}: ${card.querySelector('h3').textContent}`);
+        
+        card.addEventListener('keydown', function(e) {
+            if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                this.click();
+            }
+        });
+    });
+}
+
+function initErrorHandling() {
+    window.addEventListener('error', function(e) {
+        console.error('Student Services page error:', e.error);
+    });
+    
+    const images = document.querySelectorAll('img');
+    images.forEach(img => {
+        img.addEventListener('error', function() {
+            this.src = 'https://via.placeholder.com/300x200?text=Image+Not+Available';
+        });
+    });
+}
+
+// ======================
+// MAIN INITIALIZATION
+// ======================
+document.addEventListener('DOMContentLoaded', function() {
+    console.log('Student Services Hub loaded!');
+    
+    try {
+        initServiceCards();
+        initQuickAccessIcons();
+        initNewsletterSignup();
+        initSocialInteractions();
+        initEventsBanner();
+        initSuccessStories();
+        initContactInfo();
+        initAccessibility();
+        initErrorHandling();
+        
+        console.log('All Student Services features initialized!');
+        
+    } catch (error) {
+        console.error('Error initializing Student Services:', error);
+        showNotification('Some features may not work properly. Please refresh the page.', 'error');
+    }
+});
+
+// ======================
+// EXPORT FUNCTIONS
+// ======================
+window.StudentServices = {
+    showNotification,
+    validateEmail,
+    safeRedirect
+};
+    </script>
+</body>
+</html>

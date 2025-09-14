@@ -1,0 +1,622 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Office Hours - Bay Atlantic University</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/student-services.css">
+    <style>
+        .office-hours-section {
+            background: linear-gradient(135deg, #87CEEB, #E0F6FF);
+            padding: 40px 0;
+            min-height: 100vh;
+        }
+        
+        .office-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .page-header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        .header-logo {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+        
+        .bau-shield {
+            width: 60px;
+            height: 60px;
+            background: var(--primary-dark);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            font-size: 20px;
+        }
+        
+        .header-text h1 {
+            font-size: 48px;
+            font-weight: bold;
+            color: var(--primary-dark);
+            margin: 0;
+        }
+        
+        .header-text p {
+            font-size: 16px;
+            color: var(--primary-dark);
+            margin: 5px 0 0 0;
+        }
+        
+        .main-title {
+            background: white;
+            padding: 20px;
+            border-radius: 15px;
+            margin: 30px 0;
+            text-align: center;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        
+        .main-title h2 {
+            font-size: 36px;
+            color: #FF8C00;
+            margin: 0;
+            font-style: italic;
+        }
+        
+        .main-title h3 {
+            font-size: 28px;
+            color: var(--primary-dark);
+            margin: 5px 0 0 0;
+            font-weight: bold;
+        }
+        
+        .info-section {
+            display: flex;
+            justify-content: space-between;
+            margin: 30px 0;
+            gap: 20px;
+        }
+        
+        .hours-info {
+            background: white;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            flex: 1;
+        }
+        
+        .hours-bubble {
+            background: #333;
+            color: white;
+            padding: 15px;
+            border-radius: 15px;
+            position: relative;
+            margin-bottom: 15px;
+        }
+        
+        .hours-bubble::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 20px;
+            width: 0;
+            height: 0;
+            border-left: 10px solid transparent;
+            border-right: 10px solid transparent;
+            border-top: 10px solid #333;
+        }
+        
+        .lightbulb {
+            background: #FFD700;
+            color: #333;
+            padding: 8px;
+            border-radius: 50%;
+            display: inline-block;
+            margin-right: 10px;
+            font-weight: bold;
+        }
+        
+        .qr-section {
+            background: white;
+            padding: 20px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            flex: 1;
+        }
+        
+        .qr-code {
+            width: 120px;
+            height: 120px;
+            background: #333;
+            margin: 0 auto;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 12px;
+        }
+        
+        .scan-button {
+            background: #FFD700;
+            color: #333;
+            padding: 8px 16px;
+            border: none;
+            border-radius: 20px;
+            font-weight: bold;
+            margin: 10px 0;
+            cursor: pointer;
+        }
+        
+        .staff-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin: 40px 0;
+        }
+        
+        .staff-card {
+            background: white;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            cursor: pointer;
+            transition: transform 0.3s, box-shadow 0.3s;
+            border: 3px solid transparent;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            gap: 15px;
+        }
+        
+        .staff-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, #FFD700, #FFA500);
+        }
+        
+        .staff-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+            border-color: #FFD700;
+        }
+        
+        .staff-left {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            flex: 0 0 auto;
+            min-width: 120px;
+        }
+        
+        .staff-photo {
+            width: 70px;
+            height: 70px;
+            border-radius: 8px;
+            background: #ddd;
+            background-size: cover;
+            background-position: center;
+            margin-bottom: 10px;
+        }
+        
+        .staff-name {
+            font-size: 14px;
+            font-weight: bold;
+            color: var(--primary-dark);
+            margin-bottom: 5px;
+            line-height: 1.2;
+        }
+        
+        .staff-title {
+            font-size: 11px;
+            color: #666;
+            margin-bottom: 8px;
+            line-height: 1.3;
+        }
+        
+        .contact-info {
+            font-size: 10px;
+            color: #666;
+            line-height: 1.3;
+        }
+        
+        .contact-info div {
+            margin-bottom: 2px;
+        }
+        
+        .location {
+            font-style: italic;
+            color: #888;
+            font-size: 10px;
+            margin-top: 5px;
+        }
+        
+        .staff-right {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            padding-left: 15px;
+            border-left: 1px solid #f0f0f0;
+        }
+        
+        .ask-about {
+            font-size: 13px;
+            font-weight: bold;
+            color: var(--primary-dark);
+            margin-bottom: 8px;
+        }
+        
+        .services-list {
+            font-size: 12px;
+            color: #666;
+            line-height: 1.4;
+        }
+        
+        .career-corner {
+            color: #E53E3E;
+            font-weight: bold;
+            font-size: 14px;
+            margin-top: 10px;
+        }
+        
+        .footer-info {
+            background: white;
+            padding: 25px;
+            border-radius: 15px;
+            margin-top: 30px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            position: relative;
+        }
+        
+        .footer-bubble {
+            background: var(--primary-dark);
+            color: white;
+            padding: 15px 25px;
+            border-radius: 20px;
+            display: inline-block;
+            margin-bottom: 15px;
+            font-weight: bold;
+        }
+        
+        .hours-details h4 {
+            color: var(--primary-dark);
+            margin-bottom: 10px;
+            font-size: 16px;
+        }
+        
+        .hours-text {
+            color: #666;
+            font-size: 14px;
+            margin-bottom: 5px;
+        }
+        
+        .summer-hours {
+            color: #FF8C00;
+            font-weight: bold;
+        }
+        
+        .student-union {
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .union-badge {
+            background: var(--primary-dark);
+            color: white;
+            padding: 10px 15px;
+            border-radius: 10px;
+            font-weight: bold;
+            transform: rotate(-5deg);
+        }
+        
+        .student-icons {
+            display: flex;
+            gap: 5px;
+        }
+        
+        .student-icon {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background: #333;
+        }
+        
+        @media (max-width: 768px) {
+            .staff-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+            
+            .info-section {
+                flex-direction: column;
+            }
+            
+            .header-text h1 {
+                font-size: 32px;
+            }
+            
+            .main-title h2 {
+                font-size: 24px;
+            }
+            
+            .main-title h3 {
+                font-size: 20px;
+            }
+            
+            .staff-card {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .staff-left {
+                align-items: center;
+                min-width: auto;
+            }
+            
+            .staff-right {
+                padding-left: 0;
+                border-left: none;
+                border-top: 1px solid #f0f0f0;
+                padding-top: 15px;
+                margin-top: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+        <header class="header">
+        <div class="header-container">
+            <div class="header-left">
+                <img src="images\logo.jpg" alt="Bau logo">
+                <div class="header-text-container">
+                    <div class="header-text">STUDENT SERVICES HUB</div>
+                    <div class="header-subtext">BAY ATLANTIC UNIVERSITY</div>
+                </div>
+            </div>
+            
+            <div class="header-center">
+                <nav>
+                    <ul class="nav-links">
+                        <li><a href="about-us.html">About Us</a></li>
+                        <li><a href="administration.html">Administration</a></li>
+                        <li><a href="all-events.html">Events</a></li>
+                        <li><a href="elections.html">Elections</a></li>
+                    </ul>
+                </nav>
+            </div>
+            
+            <div class="header-right">
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/BayAtlanticUniversity/" class="social-icon" target="_blank">f</a>
+                    <a href="https://www.instagram.com/bau_dc/?hl=en" class="social-icon" target="_blank">@</a>
+                    <a href="https://www.linkedin.com/school/bay-atlantic-university/posts/?feedView=all" class="social-icon" target="_blank">in</a>
+                    <a href="https://x.com/BayAtlanticUni" class="social-icon" target="_blank">X</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Breadcrumb -->
+    <div class="breadcrumb">
+        <div class="container">
+            <a href="index.html">Home</a> > <span>Office Hours</span>
+        </div>
+    </div>
+
+    <!-- Office Hours Section -->
+    <section class="office-hours-section">
+        <div class="office-container">
+            
+
+            <!-- Main Title -->
+            <div class="main-title">
+                <h2>Meet Our Team</h2>
+                <h3>STUDENT SERVICES</h3>
+            </div>
+
+            <!-- Info Section -->
+            <div class="info-section">
+                <div class="hours-info">
+                    <div class="hours-bubble">
+                        <span class="lightbulb">💡</span>
+                        <strong>DID YOU KNOW?</strong><br>
+                        We have <span style="color: #FF8C00;">Student Services Hour!</span><br>
+                        <strong>Every Monday<br>
+                        11 am - 12 pm</strong>
+                    </div>
+                </div>
+
+                <div class="qr-section">
+                    <p>Click on the profiles to book one-on-one meeting</p>
+                    
+                    
+                </div>
+            </div>
+
+            <!-- Staff Grid -->
+            <div class="staff-grid">
+                <!-- Renee McKie -->
+                <div class="staff-card" data-calendly="renee">
+                    <div class="staff-left">
+                        <img src="images\renee-mckie.jpg" alt="Career Development">
+                        <div class="staff-name">RENEE MCKIE</div>
+                        <div class="staff-title">Director of Student Services</div>
+                        <div class="contact-info">
+                            <div>Phone: 202 644 7202</div>
+                            <div>Email: rmckie@bau.edu</div>
+                        </div>
+                        <div class="location">Location: 7th Floor</div>
+                    </div>
+                    <div class="staff-right">
+                        <div class="ask-about">Ask me about...</div>
+                        <div class="services-list">
+                            Events,<br>
+                            Career Services,<br>
+                            Health Insurance,<br>
+                            Workshops,<br>
+                            Housing, Upass,<br>
+                            and Scholarships
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Patt Chaluuntorn -->
+                <div class="staff-card" data-calendly="patt">
+                    <div class="staff-left">
+                        <img src="images\patt-chaluuntorn.jpg" alt="Trips & Events">
+                        <div class="staff-name">PATT CHALUUNTORN</div>
+                        <div class="staff-title">Event Coordinator</div>
+                        <div class="contact-info">
+                            <div>Phone: 771 203 3916</div>
+                            <div>Email: cthinkratjok@bau.edu</div>
+                        </div>
+                        <div class="location">Location: 7th Floor</div>
+                    </div>
+                    <div class="staff-right">
+                        <div class="ask-about">Ask me about...</div>
+                        <div class="services-list">
+                            Events,<br>
+                            Activities,<br>
+                            and Field trips
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Lucca Mauricio -->
+                <div class="staff-card" data-calendly="lucca">
+                    <div class="staff-left">
+                        <img src="images\lucca-mauricio.jpg" alt="Carrer Services">
+                        <div class="staff-name">LUCCA MAURICIO</div>
+                        <div class="staff-title">Career Services Coordinator</div>
+                        <div class="contact-info">
+                            <div>Email: careerservices@bau.edu</div>
+                        </div>
+                    </div>
+                    <div class="staff-right">
+                        <div class="ask-about">Ask me about...</div>
+                        <div class="services-list">
+                            BAU Career Corner,<br>
+                            BAU Job/Internship<br>
+                            opportunities
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Gokhan Ince -->
+                <div class="staff-card" data-calendly="gokhan">
+                    <div class="staff-left">
+                        <img src="images\gokhan-ince.jpg" alt="Housing">
+                        <div class="staff-name">GOKHAN INCE</div>
+                        <div class="staff-title">Housing Coordinator</div>
+                        <div class="contact-info">
+                            <div>Phone: 202 450 1947</div>
+                            <div>Email: studenthousing@bau.edu</div>
+                        </div>
+                    </div>
+                    <div class="staff-right">
+                        <div class="ask-about">Ask me about student housing!</div>
+                        <div class="services-list">
+                            Need more info on available housing?<br><br>
+                            Complete the inquiry form here:
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Footer Info -->
+            <div class="footer-info">
+                <div class="footer-bubble">
+                    THE BAY!<br>
+                    <span style="font-size: 12px;">STUDENT UNION</span>
+                </div>
+                <div class="hours-details">
+                    <h4>LOCATION: 1ST FLOOR<br>HOURS OF OPERATION:</h4>
+                    <div class="hours-text">Regular Hours:<br>
+                    <strong>Monday - Friday: 8:30 AM - 9:00 PM</strong></div>
+                    <div class="hours-text summer-hours">Summer Hours:<br>
+                    <strong>Monday - Friday: 8:30 AM - 6:00 PM</strong></div>
+                </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        function showNotification(message, type = 'success') {
+            const notification = document.createElement('div');
+            notification.textContent = message;
+            notification.style.cssText = `
+                position: fixed; top: 20px; right: 20px; padding: 15px 20px;
+                background: ${type === 'success' ? '#28a745' : type === 'info' ? '#17a2b8' : '#dc3545'};
+                color: white; border-radius: 5px; z-index: 1000;
+                box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+                transform: translateX(100%); transition: transform 0.3s ease;
+            `;
+            document.body.appendChild(notification);
+            setTimeout(() => notification.style.transform = 'translateX(0)', 100);
+            setTimeout(() => {
+                notification.style.transform = 'translateX(100%)';
+                setTimeout(() => document.body.removeChild(notification), 300);
+            }, 3000);
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            const staffCards = document.querySelectorAll('.staff-card');
+            
+            staffCards.forEach(card => {
+                card.addEventListener('click', function() {
+                    const staffMember = this.getAttribute('data-calendly');
+                    const staffName = this.querySelector('.staff-name').textContent;
+                    
+                    // Visual feedback
+                    this.style.transform = 'scale(0.98)';
+                    setTimeout(() => {
+                        this.style.transform = '';
+                    }, 200);
+                    
+                    // Show notification and redirect to Calendly
+                    showNotification(`Opening ${staffName}'s calendar...`, 'info');
+                    
+                    setTimeout(() => {
+                        // Replace these URLs with actual Calendly links for each staff member
+                        const calendlyLinks = {
+                            'renee': 'https://calendly.com/rmckie-19y/30min',
+                            'patt': 'https://calendly.com/cthinkratok-bau/30min',
+                            'lucca': 'https://calendly.com/baucareerservices/30min',
+                            'gokhan': 'https://calendly.com/gokhan-ince'
+                        };
+                        
+                        const calendlyUrl = calendlyLinks[staffMember] || 'https://calendly.com';
+                        window.open(calendlyUrl, '_blank');
+                    }, 500);
+                });
+            });
+        });
+    </script>
+</body>
+</html>

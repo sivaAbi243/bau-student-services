@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Career Corner News - Bay Atlantic University</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/student-services.css">
+    <style>
+        .newsletter-section {
+            background: white;
+            padding: 60px 0;
+        }
+        
+        .newsletter-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 20px;
+            text-align: center;
+        }
+        
+        .newsletter-header h1 {
+            font-size: 32px;
+            color: var(--primary-dark);
+            margin-bottom: 20px;
+        }
+        
+        .newsletter-header p {
+            font-size: 18px;
+            color: #666;
+            margin-bottom: 40px;
+        }
+        
+        .newsletter-options {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .newsletter-option {
+            background: #f8f9fa;
+            padding: 30px;
+            border-radius: 12px;
+            border: 2px solid transparent;
+            transition: all 0.3s;
+        }
+        
+        .newsletter-option:hover {
+            border-color: var(--primary-gold);
+            transform: translateY(-5px);
+        }
+        
+        .option-icon {
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+        
+        .option-title {
+            font-size: 20px;
+            font-weight: bold;
+            color: var(--primary-dark);
+            margin-bottom: 15px;
+        }
+        
+        .option-description {
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 25px;
+            line-height: 1.6;
+        }
+        
+        .email-form {
+            margin-bottom: 20px;
+        }
+        
+        .email-input {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            margin-bottom: 15px;
+            font-size: 14px;
+        }
+        
+        .subscribe-btn, .download-btn {
+            background: var(--primary-dark);
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 6px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.3s;
+            width: 100%;
+        }
+        
+        .subscribe-btn:hover, .download-btn:hover {
+            background: var(--accent-blue);
+        }
+        
+        .update-info {
+            background: #e8f4fd;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 40px 0;
+        }
+        
+        .update-info h3 {
+            color: var(--primary-dark);
+            margin-bottom: 10px;
+        }
+        
+        .update-info p {
+            color: #666;
+            margin: 0;
+        }
+        
+        @media (max-width: 768px) {
+            .newsletter-options {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+            
+            .newsletter-header h1 {
+                font-size: 24px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-container">
+            <div class="header-left">
+                <img src="images\logo.jpg" alt="Bau logo">
+                <div class="header-text-container">
+                    <div class="header-text">STUDENT SERVICES HUB</div>
+                    <div class="header-subtext">BAY ATLANTIC UNIVERSITY</div>
+                </div>
+            </div>
+            
+            <div class="header-center">
+                <nav>
+                    <ul class="nav-links">
+                        <li><a href="about-us.html">About Us</a></li>
+                        <li><a href="administration.html">Administration</a></li>
+                        <li><a href="all-events.html">Events</a></li>
+                        <li><a href="elections.html">Elections</a></li>
+                    </ul>
+                </nav>
+            </div>
+            
+            <div class="header-right">
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/BayAtlanticUniversity/" class="social-icon" target="_blank">f</a>
+                    <a href="https://www.instagram.com/bau_dc/?hl=en" class="social-icon" target="_blank">@</a>
+                    <a href="https://www.linkedin.com/school/bay-atlantic-university/posts/?feedView=all" class="social-icon" target="_blank">in</a>
+                    <a href="https://x.com/BayAtlanticUni" class="social-icon" target="_blank">X</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Breadcrumb -->
+    <div class="breadcrumb">
+        <div class="container">
+            <a href="index.html">Home</a> > <span>Career Corner News</span>
+        </div>
+    </div>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter-section">
+        <div class="newsletter-container">
+            <div class="newsletter-header">
+                <h1>Career Corner News</h1>
+                <p>Stay updated with the latest career opportunities, industry insights, and professional development tips</p>
+            </div>
+
+            <div class="update-info">
+                <h3>Bi-weekly Updates</h3>
+                <p>Our Career Corner Newsletter is updated every two weeks with fresh content including job market trends, interview tips, networking opportunities, and success stories from our alumni.</p>
+            </div>
+
+            <div class="newsletter-options">
+                <div class="newsletter-option">
+                    <div class="option-icon">📧</div>
+                    <h3 class="option-title">Email Newsletter</h3>
+                    <p class="option-description">Subscribe to receive our bi-weekly newsletter directly in your inbox. Never miss important career updates and opportunities.</p>
+                    
+                    <form class="email-form" id="newsletter-form">
+                        <input type="email" class="email-input" placeholder="Enter your email address" required>
+                        <button type="submit" class="subscribe-btn">Subscribe Now</button>
+                    </form>
+                </div>
+
+                <div class="newsletter-option">
+                    <div class="option-icon">📥</div>
+                    <h3 class="option-title">Download Our News Letter</h3>
+                    <p class="option-description">Download the current newsletter as a PDF. Perfect for sharing with friends.</p>
+                    
+                    <button class="download-btn" id="download-btn">Download Document</button>
+                    <p style="font-size: 12px; color: #999; margin-top: 10px;">Last updated: 2 days ago</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="services-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-left">
+                    <h3>Career Corner News</h3>
+                    <div class="footer-divider"></div>
+                    <p>Stay connected with Bay Atlantic University's career services and never miss an opportunity to advance your professional journey.</p>
+                </div>
+                <div class="footer-center">
+                    <div class="contact-info">
+                        <p>+1 2024503247</p>
+                        <div class="address">
+                            <p>1510 H St NW,</p>
+                            <p>Washington, DC</p>
+                            <p>20005</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-right">
+                    <p>Bay Atlantic University is a 501(c)(3) non-profit recognized by the IRS.</p>
+                    <div class="footer-social">
+                        <a href="#" class="footer-social-icon">f</a>
+                        <a href="#" class="footer-social-icon">@</a>
+                        <a href="#" class="footer-social-icon">in</a>
+                        <a href="#" class="footer-social-icon">💬</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function validateEmail(email) {
+            const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            return re.test(email);
+        }
+
+        function showNotification(message, type = 'success') {
+            const notification = document.createElement('div');
+            notification.textContent = message;
+            notification.style.cssText = `
+                position: fixed; top: 20px; right: 20px; padding: 15px 20px;
+                background: ${type === 'success' ? '#28a745' : '#dc3545'};
+                color: white; border-radius: 5px; z-index: 1000;
+                box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+                transform: translateX(100%); transition: transform 0.3s ease;
+            `;
+            document.body.appendChild(notification);
+            setTimeout(() => notification.style.transform = 'translateX(0)', 100);
+            setTimeout(() => {
+                notification.style.transform = 'translateX(100%)';
+                setTimeout(() => document.body.removeChild(notification), 300);
+            }, 3000);
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            const newsletterForm = document.getElementById('newsletter-form');
+            const emailInput = newsletterForm.querySelector('.email-input');
+            const subscribeBtn = newsletterForm.querySelector('.subscribe-btn');
+
+            newsletterForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                const email = emailInput.value.trim();
+                if (validateEmail(email)) {
+                    subscribeBtn.textContent = 'Subscribed!';
+                    subscribeBtn.style.background = '#28a745';
+                    emailInput.value = '';
+                    setTimeout(() => {
+                        subscribeBtn.textContent = 'Subscribe Now';
+                        subscribeBtn.style.background = '';
+                    }, 3000);
+                    showNotification('Successfully subscribed to Career Corner News!', 'success');
+                } else {
+                    showNotification('Please enter a valid email address', 'error');
+                }
+            });
+
+            const downloadBtn = document.getElementById('download-btn');
+            downloadBtn.addEventListener('click', function() {
+                this.textContent = 'Downloading...';
+                setTimeout(() => {
+                    this.textContent = 'Download Document';
+                    showNotification('Newsletter downloaded successfully!', 'success');
+                    const link = document.createElement('a');
+                    link.href = 'https://baubayatlantic-my.sharepoint.com/:b:/g/personal/smylavarapu_stu_bau_edu/EdLgesTqAGBMkyOY4ROf56wBETyiR3TDNHQXm1HRVnNpSQ?e=ma7HZ0';
+                    link.download = 'Career-Corner-News-Latest.pdf';
+                    document.body.appendChild(link);
+                    link.click();
+                    document.body.removeChild(link);
+                }, 1000);
+            });
+        });
+    </script>
+</body>
+</html>

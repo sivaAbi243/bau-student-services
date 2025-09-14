@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Volunteer Opportunities - Bay Atlantic University</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/student-services.css">
+    <style>
+        .volunteer-section {
+            background: white;
+            padding: 60px 0;
+        }
+        
+        .volunteer-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .volunteer-header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        
+        .volunteer-header h1 {
+            font-size: 32px;
+            color: var(--primary-dark);
+            margin-bottom: 20px;
+        }
+        
+        .volunteer-header p {
+            font-size: 18px;
+            color: #666;
+            line-height: 1.6;
+        }
+        
+        .booklet-card {
+            background: linear-gradient(135deg, #fff5f5, #ffe8e8);
+            border: 2px solid #e63946;
+            border-radius: 12px;
+            padding: 40px;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        
+        .booklet-icon {
+            font-size: 64px;
+            margin-bottom: 20px;
+            color: #e63946;
+        }
+        
+        .booklet-card h2 {
+            font-size: 24px;
+            color: var(--primary-dark);
+            margin-bottom: 15px;
+        }
+        
+        .booklet-description {
+            font-size: 16px;
+            color: #666;
+            margin-bottom: 25px;
+            line-height: 1.6;
+        }
+        
+        .download-btn {
+            background: #e63946;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            border-radius: 8px;
+            font-size: 18px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        .download-btn:hover {
+            background: #d62828;
+            transform: translateY(-2px);
+        }
+        
+        .info-section {
+            background: #f8f9fa;
+            padding: 30px;
+            border-radius: 12px;
+            margin-top: 40px;
+        }
+        
+        .info-section h3 {
+            color: var(--primary-dark);
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+            margin-top: 30px;
+        }
+        
+        .info-item {
+            text-align: center;
+            padding: 20px;
+            background: white;
+            border-radius: 8px;
+        }
+        
+        .info-icon {
+            font-size: 36px;
+            margin-bottom: 15px;
+            color: #e63946;
+        }
+        
+        .info-item h4 {
+            color: var(--primary-dark);
+            margin-bottom: 10px;
+            font-size: 16px;
+        }
+        
+        .info-item p {
+            color: #666;
+            font-size: 14px;
+            line-height: 1.5;
+            margin: 0;
+        }
+        
+        @media (max-width: 768px) {
+            .volunteer-header h1 {
+                font-size: 24px;
+            }
+            
+            .info-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+            
+            .booklet-card {
+                padding: 30px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+        <header class="header">
+        <div class="header-container">
+            <div class="header-left">
+                <img src="images\logo.jpg" alt="Bau logo">
+                <div class="header-text-container">
+                    <div class="header-text">STUDENT SERVICES HUB</div>
+                    <div class="header-subtext">BAY ATLANTIC UNIVERSITY</div>
+                </div>
+            </div>
+            
+            <div class="header-center">
+                <nav>
+                    <ul class="nav-links">
+                        <li><a href="about-us.html">About Us</a></li>
+                        <li><a href="administration.html">Administration</a></li>
+                        <li><a href="all-events.html">Events</a></li>
+                        <li><a href="elections.html">Elections</a></li>
+                    </ul>
+                </nav>
+            </div>
+            
+            <div class="header-right">
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/BayAtlanticUniversity/" class="social-icon" target="_blank">f</a>
+                    <a href="https://www.instagram.com/bau_dc/?hl=en" class="social-icon" target="_blank">@</a>
+                    <a href="https://www.linkedin.com/school/bay-atlantic-university/posts/?feedView=all" class="social-icon" target="_blank">in</a>
+                    <a href="https://x.com/BayAtlanticUni" class="social-icon" target="_blank">X</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Breadcrumb -->
+    <div class="breadcrumb">
+        <div class="container">
+            <a href="index.html">Home</a> > <span>Volunteer Opportunities</span> 
+        </div>
+    </div>
+
+    <!-- Volunteer Section -->
+    <section class="volunteer-section">
+        <div class="volunteer-container">
+            <div class="volunteer-header">
+                <h1>Volunteer Opportunities</h1>
+                <p>Make a positive impact in your community while gaining valuable experience and building meaningful connections.</p>
+            </div>
+
+            <div class="booklet-card">
+                <div class="booklet-icon">🤝</div>
+                <h2>Volunteer Opportunities Booklet</h2>
+                <p class="booklet-description">
+                    Download our comprehensive volunteer opportunities booklet featuring various community service projects, 
+                    local partnerships, and ways to make a difference in Washington, DC and surrounding areas.
+                </p>
+                <button class="download-btn" id="download-booklet">Download Volunteer Booklet</button>
+            </div>
+
+            <div class="info-section">
+                <h3>Why Volunteer with BAU?</h3>
+                <div class="info-grid">
+                    <div class="info-item">
+                        <div class="info-icon">🌟</div>
+                        <h4>Skill Development</h4>
+                        <p>Develop leadership, communication, and project management skills through hands-on experience.</p>
+                    </div>
+                    
+                    <div class="info-item">
+                        <div class="info-icon">🤝</div>
+                        <h4>Community Impact</h4>
+                        <p>Make a real difference in local communities while addressing important social issues.</p>
+                    </div>
+                    
+                    <div class="info-item">
+                        <div class="info-icon">📚</div>
+                        <h4>Academic Credit</h4>
+                        <p>Many volunteer opportunities can be counted toward service learning requirements.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="services-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-left">
+                    <h3>Volunteer Opportunities</h3>
+                    <div class="footer-divider"></div>
+                    <p>Connecting Bay Atlantic University students with meaningful volunteer experiences that create positive community impact.</p>
+                </div>
+                <div class="footer-center">
+                    <div class="contact-info">
+                        <p>+1 2024503247</p>
+                        <div class="address">
+                            <p>1510 H St NW,</p>
+                            <p>Washington, DC</p>
+                            <p>20005</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-right">
+                    <p>Bay Atlantic University is a 501(c)(3) non-profit recognized by the IRS.</p>
+                    <div class="footer-social">
+                        <a href="#" class="footer-social-icon">f</a>
+                        <a href="#" class="footer-social-icon">@</a>
+                        <a href="#" class="footer-social-icon">in</a>
+                        <a href="#" class="footer-social-icon">💬</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function showNotification(message, type = 'success') {
+            const notification = document.createElement('div');
+            notification.textContent = message;
+            notification.style.cssText = `
+                position: fixed; top: 20px; right: 20px; padding: 15px 20px;
+                background: ${type === 'success' ? '#28a745' : '#dc3545'};
+                color: white; border-radius: 5px; z-index: 1000;
+                box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+                transform: translateX(100%); transition: transform 0.3s ease;
+            `;
+            document.body.appendChild(notification);
+            setTimeout(() => notification.style.transform = 'translateX(0)', 100);
+            setTimeout(() => {
+                notification.style.transform = 'translateX(100%)';
+                setTimeout(() => document.body.removeChild(notification), 300);
+            }, 3000);
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            const downloadBtn = document.getElementById('download-booklet');
+            
+            downloadBtn.addEventListener('click', function() {
+                this.textContent = 'Downloading...';
+                this.style.background = '#666';
+                
+                setTimeout(() => {
+                    this.textContent = 'Download Volunteer Booklet';
+                    this.style.background = '';
+                    showNotification('Volunteer booklet downloaded successfully!', 'success');
+                    
+                    // Add your OneDrive link here when ready
+                    const link = document.createElement('a');
+                    link.href = 'https://baubayatlantic-my.sharepoint.com/:b:/g/personal/smylavarapu_stu_bau_edu/EVncO0kCLQhIm1Gi-rjO1lQBIYE7jde4_BzyjJLBCNmnJw?e=leU7tM&download=1';
+                    link.download = 'Volunteer-Opportunities-Booklet.pdf';
+                    document.body.appendChild(link);
+                    link.click();
+                    document.body.removeChild(link);
+                }, 1000);
+            });
+        });
+    </script>
+</body>
+</html>
